@@ -1,0 +1,51 @@
+html, body {
+  background: snow;
+}
+
+header, 
+footer {
+  background: #222;
+  color: white;
+  text-align: center;
+  height: 32px;
+  line-height: 32px;
+  position: -webkit-sticky;
+  position: sticky;
+  z-index: 999;
+}
+header {
+  top: 0;
+}
+footer {
+  bottom: 0;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.region-list h2 {
+  font-size: 1em;
+  font-weight: normal;
+  padding: 0.5em;
+  margin: 0;
+  background: rgba(200,200,200,0.9);
+  color: #222;
+  
+  position: -webkit-sticky;
+  position: sticky;
+  
+  top: 32px;
+  
+}
+.library-item {  
+  padding: 1em 0.5em;
+  background: snow;
+  border-bottom: 1px solid #ccc;
+}
+.open-hour {
+  color: grey;
+  font-size: .6em;
+  padding-top: .8em;
+}
