@@ -1,0 +1,74 @@
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1">
+
+  <meta name="apple-mobile-web-app-capable" content="yes">
+
+  <meta name="apple-mobile-web-app-title" content="澳門圖書館">
+</head>
+<body>
+  <div id="app">
+    <header>
+      澳門圖書館
+    </header>
+    <ul class='region-list'>
+      <li v-for="(list, area) in libraries">
+        <h2>{{area}}</h2>
+        <ul>
+          <li class='library-item' v-for="library in list">
+            {{library.name}}
+            <div class="open-hour">{{library.open_hour}}</div>
+          </li>
+        </ul>
+      </li>
+    </ul>
+    <footer>Footer here</footer>
+  </div>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.3/vue.js'></script>
+  <script>
+  var app = new Vue({
+  el: "#app",
+  data: {
+    name: "Thomas",
+    libraries: {
+      澳門中區: [
+        { name: "澳門中央圖書館", open_hour: "星期一至日 10:00 – 20:00" },
+        { name: "何賢公園圖書館", open_hour: "星期二至星期日　8:00 - 20:00" }
+      ],
+      澳門南區: [
+        { name: "何東圖書館", open_hour: "星期一至六 10:00 – 19:00 星期日 11:00 – 19:00" },
+        { name: "下環圖書館", open_hour: "星期二至星期日　8:00 - 20:00" }
+      ],
+      澳門西區: [
+        {
+          name: "沙梨頭圖書館",
+          open_hour: "星期一 14:00 - 20:30 星期二至星期日 09:30 - 20:30"
+        },
+        { name: "紅街市圖書館", open_hour: "星期一至日 全日開放" },
+        { name: "白鴿巢公園黃營均圖書館", open_hour: "星期二至星期日　8:00 - 20:00" }
+      ],
+      澳門北區: [
+        { name: "青洲圖書館", open_hour: "星期一至六 10:00 – 20:00 星期日 12:00 – 20:00" },
+        { name: "望廈圖書館", open_hour: "星期一至日 12:00 – 19:00" },
+        { name: "紀念孫中山公園黃營均圖書館", open_hour: "星期二至星期日　8:00 - 20:00" },
+        { name: "黑沙環公園黃營均圖書館", open_hour: "星期二至星期日　8:00 - 20:00" },
+        { name: "黑沙環公園黃營均兒童圖書館", open_hour: "星期二至星期日　8:00 - 20:00" }
+      ],
+      氹仔: [
+        { name: "氹仔圖書館", open_hour: "星期一14:00 - 20:30 星期二至星期日9:30 – 20:30" },
+        { name: "氹仔黃營均圖書館", open_hour: "星期二至星期日　8:00 - 20:00" }
+      ],
+      路環: [{ name: "路環圖書館", open_hour: "星期一至六 13:00 – 19:00" }],
+      其他: [
+        { name: "流動圖書館", open_hour: "星期一、二及五 12:00 - 19:00 星期三 12:30 - 18:30" },
+        { name: "民政總署大樓圖書館", open_hour: "星期一至六 13:00 – 19:00" }
+      ]
+    }
+  }
+});
+
+
+document.ontouchstart = function(){};
+</script>
+</body>
+</html>
